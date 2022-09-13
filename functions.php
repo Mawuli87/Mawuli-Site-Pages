@@ -16,6 +16,15 @@ add_action('wp_enqueue_scripts','university_files');
 
 //dynamic title tag function
 function university_features() {
+    /**for dynamic menu, after adding this if you go back to wordPress
+      admin and hover over appearance you will see a menu
+    **/
+    register_nav_menu('headerMenuLocation','Header Menu Location');
+    
+     //register another menu location
+     register_nav_menu('FooterMenuLocationOne','Footer Menu Location One');
+     register_nav_menu('FooterMenuLocationTwo','Footer Menu Location Two');
+    
     add_theme_support('title-tag');
   }
   add_action('after_setup_theme', 'university_features');
